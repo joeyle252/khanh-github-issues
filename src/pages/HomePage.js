@@ -10,7 +10,7 @@ import Modal from 'react-modal';
 const ReactDOM = require('react-dom')
 const moment = require('moment');
 // const ReactMarkdown = require('react-markdown')
-// const ReactMarkdown = require('react-markdown/with-html')
+const ReactMarkdown = require('react-markdown/with-html')
 // const React = require('react')
 
 const clientId = process.env.REACT_APP_CLIENT_ID;
@@ -94,8 +94,6 @@ function HomePage() {
         }, 3000);
     }
 
-
-
     const fetchSearch = async (searchTerm, page) => {
         setView('landing')
         try {
@@ -137,7 +135,6 @@ function HomePage() {
         console.log('listIssue', result)
         
         setIssues(result)
-        // console.log(issues)
     }
 
     let openModal = () => {
@@ -223,9 +220,6 @@ function HomePage() {
         }
     }
 
-
-
-    // console.log(token)
     return (
         <div>
             <NavBarSearch
